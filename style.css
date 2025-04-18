@@ -158,12 +158,13 @@ input[type="date"] {
   background: #e9ecef;
   padding: 5px;
   border-radius: 5px;
+  color: #333;
 }
 
 /* Styles pour écrans petits (mobile) */
 @media (max-width: 600px) {
   .container {
-    width: 90vw; /* largeur adaptée à l’écran */
+    width: 70vw; /* largeur adaptée à l’écran */
     padding: 15px;
   }
 
@@ -171,9 +172,19 @@ input[type="date"] {
     font-size: 1.8rem;
   }
 
+  input {
+    width: 100%; /* L'input prend toute la largeur disponible */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Important pour inclure le padding dans la largeur */
+  }
   .input-container {
-    flex-direction: column;
+    display: flex;
+    flex-direction: column; /* Les éléments s'empilent verticalement */
+    align-items: center; /* Centre horizontalement les éléments */
     gap: 10px;
+    margin-bottom: 20px;
   }
 
   input[type="text"] {
@@ -182,9 +193,15 @@ input[type="date"] {
   }
 
   button {
-    width: 100%;
-    padding: 12px;
-    font-size: 1.1rem;
+    width: 100%; /* Le bouton prend toute la largeur disponible */
+    max-width: 300px; /* Limite la largeur du bouton pour ne pas être trop grand */
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
   }
 
   li {
